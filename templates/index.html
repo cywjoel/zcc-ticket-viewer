@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a class="logo" href="/">
+        <h1 class="mt-5 mb-5">{% block title %}Zendesk Ticket Viewer{% endblock %}</h1>
+    </a>
+
+    <nav>
+        <ul class="pagination">
+            {% if endpoint == pages[0] %}
+                {% if pages|length == 1 %}
+                    <li class="page-item disabled"><a class="page-link" href="{{ pages.index(endpoint) + 1 }}">Next Page</a></li>
+                {% else %}
+                    <li class="page-item"><a class="page-link" href="{{ pages.index(endpoint) + 1 }}">Next Page</a></li>
+                {% endif %}
+            {% elif endpoint == pages|last %}
+                <li class="page-item"><a class="page-link" href="{{ pages.index(endpoint) - 1 }}">Previous Page</a></li>
+            {% else %}
+                <li class="page-item"><a class="page-link" href="{{ pages.index(endpoint) - 1 }}">Previous Page</a></li>
+                <li class="page-item"><a class="page-link" href="{{ pages.index(endpoint) + 1 }}">Next Page</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    
+    <hr>
+    {% if tickets|length == 0 %}
+        <h3>There are no tickets to display.</h3>
+        <p>Do refresh the page to check if there are any new tickets!</p>
+        <hr>
+    {% else %}
+        {% for ticket in tickets %}
+            <a href="{{ url_for('ticket', ticket_id=ticket['id']) }}">
+                <h3>{{ ticket['subject'] }}</h2>
+            </a>
+            <span class="badge badge-primary" style="font-size: 14px">Ticket created on {{ ticket['created_at'][0:10] }} at {{ ticket['created_at'][11:19] }}</span>
+            <hr>
+        {% endfor %}
+    {% endif %}
+
+    <nav>
+        <ul class="pagination">
+            {% if endpoint == pages[0] %}
+                {% if pages|length == 1 %}
+                    <li class="page-item disabled"><a class="page-link" href="{{ pages.index(endpoint) + 1 }}">Next Page</a></li>
+                {% else %}
+                    <li class="page-item"><a class="page-link" href="{{ pages.index(endpoint) + 1 }}">Next Page</a></li>
+                {% endif %}
+            {% elif endpoint == pages|last %}
+                <li class="page-item"><a class="page-link" href="{{ pages.index(endpoint) - 1 }}">Previous Page</a></li>
+            {% else %}
+                <li class="page-item"><a class="page-link" href="{{ pages.index(endpoint) - 1 }}">Previous Page</a></li>
+                <li class="page-item"><a class="page-link" href="{{ pages.index(endpoint) + 1 }}">Next Page</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+{% endblock %}

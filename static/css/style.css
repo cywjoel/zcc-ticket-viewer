@@ -1,0 +1,20 @@
+/* Overwrite certain stylings of Bootstrap */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600&display=swap');
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+.logo {
+    color: black;
+}
+
+.logo:hover {
+    text-decoration: none;
+}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a class="logo" href="/">
+        <h1 class="mt-5 mb-5">{% block title %}Zendesk Ticket Viewer{% endblock %}</h1>
+    </a>
+
+    <hr>
+    <h2>You are not allowed to access this page.</h2>
+    <p>If you are authorized to use the Ticket Viewer, you may have entered an incorrect email or password.</p>
+    <p>Open your config.json file and ensure that you have entered your username and password correctly.</p>
+    <p>Then, click the button below or the website title to go back to the home page.</p>
+    <br>
+    <p><i>NOTE: If your credentials are entered correctly, you will not be able to see this page.</i></p>
+    <hr>
+
+    <nav>
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="{{ url_for('index') }}"}>Return to home page</a></li>
+        </ul>
+    </nav>
+{% endblock %}

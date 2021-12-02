@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a class="logo" href="/">
+        <h1 class="mt-5 mb-5">{% block title %}Zendesk Ticket Viewer{% endblock %}</h1>
+    </a>
+
+    <hr>
+    <h2>An error has occurred.</h2>
+    <p>Please try loading this page again later.</p>
+    <p>Click the button below or the website title to go back to the home page.</p>
+    <hr>
+    
+    <nav>
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="{{ url_for('index') }}"}>Return to home page</a></li>
+        </ul>
+    </nav>
+{% endblock %}

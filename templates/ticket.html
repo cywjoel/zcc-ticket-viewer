@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a class="logo" href="/">
+        <h1 class="mt-5 mb-5">{% block title %}Zendesk Ticket Viewer{% endblock %}</h1>
+    </a>
+
+    <h2>{{ ticket['subject'] }}</h2>
+    <span class="badge badge-primary" style="font-size: 14px">Ticket created on {{ ticket['created_at'][0:10] }} at {{ ticket['created_at'][11:19] }}</span>
+    <hr>
+    <p>{{ ticket['description'] }}</p>
+    <hr>
+    <nav>
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="{{ url_for('pages', page=ticket['id'] // 25) }}"}>Return to previous page</a></li>
+        </ul>
+    </nav>
+{% endblock %}
