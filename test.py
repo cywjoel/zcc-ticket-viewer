@@ -1,5 +1,5 @@
 from app import *
-from unittest import TestCase, main, mock
+from unittest import TestCase, main
 
 class TestConfigMethods(TestCase):
 
@@ -16,12 +16,6 @@ class TestConfigMethods(TestCase):
     
     def test_make_headers(self):
         self.assertEqual(make_headers('test_json/test_config.json'), { 'Authorization': 'Basic am9lcHVibGljQGV4YW1wbGUuY29tL3Rva2VuOjEyMzQ1Njc4OTBhYmNkZWY='})
-    
-# class TestRequestMethods(Testcase):
-#     @mock.patch(app.requests.get)
-#     def test_init_paginate(self, mock_ticket_page):
-#         mock_response = mock.Mock(status_code=200)
-#         mock_response.json.return_value =
 
 if __name__ =='__main__':
     main()

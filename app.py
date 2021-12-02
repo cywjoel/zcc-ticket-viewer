@@ -1,5 +1,4 @@
 from flask import Flask, redirect, url_for, render_template, abort
-import time
 import json
 import requests
 import base64

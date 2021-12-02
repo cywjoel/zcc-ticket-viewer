@@ -11,9 +11,9 @@
 2. Create a `config.json` file in the top-level directory with your email, API token and subdomain:
 ```
 {
-    'user': '<YOUR_EMAIL_HERE>',
-    'token': '<YOUR_API_TOKEN_HERE>',
-    'subdomain': '<YOUR_ZENDESK_SUBDOMAIN_HERE>'
+    "user": "<YOUR_EMAIL_HERE>",
+    "token": "<YOUR_API_TOKEN_HERE>",
+    "subdomain": "<YOUR_ZENDESK_SUBDOMAIN_HERE>"
 }
 ```
 2. Create Python virtual environment in top-level directory: `python -m venv venv`
