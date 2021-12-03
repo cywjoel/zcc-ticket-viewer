@@ -1,0 +1,51 @@
+{
+    "ticket": {
+        "allow_attachments": true,
+        "allow_channelback": false,
+        "assignee_id": 903437011086,
+        "brand_id": 900002790186,
+        "collaborator_ids": [],
+        "created_at": "2021-11-25T14:19:58Z",
+        "custom_fields": [],
+        "description": "Consectetur eiusmod pariatur ullamco voluptate irure sunt magna cillum velit irure commodo culpa ipsum in. Nulla non exercitation dolor quis minim deserunt ad consequat officia ullamco irure consectetur anim mollit. Cupidatat exercitation cillum excepteur culpa consectetur ad adipisicing exercitation est amet ullamco id eiusmod tempor. Aliqua quis irure culpa tempor mollit veniam. Fugiat aliquip duis non sit id eu ea anim sit ea aliqua et dolor.\n\nCulpa culpa culpa id proident dolor magna ipsum dolor irure mollit proident culpa. Officia Lorem veniam dolor sit commodo id consequat ex qui enim veniam. Laboris velit excepteur sit sit anim nulla exercitation.",
+        "due_at": null,
+        "email_cc_ids": [],
+        "external_id": null,
+        "fields": [],
+        "follower_ids": [],
+        "followup_ids": [],
+        "forum_topic_id": null,
+        "group_id": 4410302840857,
+        "has_incidents": false,
+        "id": 25,
+        "is_public": true,
+        "organization_id": 900059542466,
+        "priority": null,
+        "problem_id": null,
+        "raw_subject": "voluptate dolor deserunt ea deserunt",
+        "recipient": null,
+        "requester_id": 903437011086,
+        "satisfaction_rating": null,
+        "sharing_agreement_ids": [],
+        "status": "open",
+        "subject": "voluptate dolor deserunt ea deserunt",
+        "submitter_id": 903437011086,
+        "tags": [
+            "do",
+            "est",
+            "labore"
+        ],
+        "ticket_form_id": 900001871506,
+        "type": null,
+        "updated_at": "2021-11-25T14:19:58Z",
+        "url": "https://zccjchan.zendesk.com/api/v2/tickets/25.json",
+        "via": {
+            "channel": "api",
+            "source": {
+                "from": {},
+                "rel": null,
+                "to": {}
+            }
+        }
+    }
+}

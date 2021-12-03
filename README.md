@@ -1,14 +1,13 @@
 # Zendesk Ticket Viewer
 
-### *View your tickets in one place*
+### *A Flask web app for viewing Zendesk tickets*
 
 ---
 
 ## Installation
 
-
 1. Download repo
-2. Create a `config.json` file in the top-level directory with your email, API token and subdomain:
+2. Edit the `config.json` file in the top-level directory and replace the values with your email, API token and Zendesk subdomain:
 ```
 {
     "user": "<YOUR_EMAIL_HERE>",

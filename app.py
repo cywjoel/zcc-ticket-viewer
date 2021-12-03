@@ -33,7 +33,6 @@ def init_paginate(filename):
     subdomain = get_subdomain(filename)
     url = 'https://' + subdomain + '.zendesk.com/api/v2/tickets.json?page[size]=25'
     pages = [url]
-
     headers = make_headers('config.json')
     r = requests.get(url, headers=headers)
     if r.status_code == 200:
@@ -44,8 +43,7 @@ def init_paginate(filename):
             data = r.json()
         return pages
 
-def update_paginate(filename, pages):
-    subdomain = get_subdomain(filename)
+def update_paginate(pages):
     url = pages[len(pages) - 1]
     headers = make_headers('config.json')
     r = requests.get(url, headers=headers)
@@ -67,7 +65,7 @@ def index():
     endpoint = 'https://' + subdomain + '.zendesk.com/api/v2/tickets.json?page[size]=25'
     r = requests.get(endpoint, headers=headers)
     if r.status_code == 200:
-        update_paginate('config.json', page_list)
+        update_paginate(page_list)
         data = r.json()
         return render_template('index.html', tickets=data['tickets'], endpoint=endpoint, pages=page_list)
     elif r.status_code == 401:
@@ -78,7 +76,7 @@ def pages(page):
     if page == 0:
         return redirect(url_for('index'))
     headers = make_headers('config.json')
-    update_paginate('config.json', page_list)
+    update_paginate(page_list)
     if page < 0 or page >= len(page_list):
        abort(404)
     else:
